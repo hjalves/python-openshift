@@ -12,7 +12,7 @@ application = tornado.web.Application([
     (r"/", MainHandler),
 ])
 
-port = int(os.environ.get('OPENSHIFT_PYTHON_PORT', '8000'))
+port = int(os.environ.get('OPENSHIFT_PYTHON_PORT', '8080'))
 ip = os.environ.get('OPENSHIFT_PYTHON_IP', 'localhost')
 
 if __name__ == "__main__":
