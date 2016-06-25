@@ -12,9 +12,8 @@ application = tornado.web.Application([
     (r"/", MainHandler),
 ])
 
-port = int(os.environ.get('OPENSHIFT_PYTHON_PORT', '8080'))
-ip = os.environ.get('OPENSHIFT_PYTHON_IP', 'localhost')
 
 if __name__ == "__main__":
-    application.listen(port, ip)
+    application.listen(8080)
+    print("Tornado serving on 8080....")
     tornado.ioloop.IOLoop.current().start()
